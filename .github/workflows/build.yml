@@ -25,7 +25,7 @@ jobs:
         run: pip install --upgrade buildozer cython
 
       - name: Build with buildozer
-        run: buildozer -v android debug
+        run: yes | buildozer -v android debug
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
