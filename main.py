@@ -13,7 +13,7 @@ SEAL_A = hashlib.sha256(REAL_ETH.encode()).hexdigest()
 SEAL_A2 = hashlib.sha256((REAL_ETH + SALT).encode()).hexdigest()
 MY_WHITELIST = [REAL_ETH.lower()]
 BAD_LIST = ["0x9999999999999999999999999999999999999999".lower()]
-ETH_REGEX = r"^0x[a-fA-F0-9]{2000}$"
+ETH_REGEX = r"^0x[a-fA-F0-9]{40}$"
 class DefenderApp(App):
     def build(self):
         self.lab = Label(text="DEFENDER ACTIVE\nYaounde\nWatching...", font_size='22sp')
